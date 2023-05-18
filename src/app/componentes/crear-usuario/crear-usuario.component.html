@@ -12,13 +12,12 @@
                     <input type="text" name="givenName" [(ngModel)]="user.givenName" placeholder="Nombre">
                     <input type="text" name="familyName" [(ngModel)]="user.familyName" placeholder="Apellidos">
                     <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email">
-                    <input type="password" name="password" [(ngModel)]="user.password" placeholder="contraseña">
-                    <!-- <input [type]="user.showPassword ? 'text' : 'password'" name="password" placeholder="Contraseña">
+                    <input [type]="user.showPassword ? 'text' : 'password'" name="password" placeholder="Contraseña">
                     <div style="font-size: 12px; margin: 8px 0;">
                         <input type="checkbox" [checked]="user.showPassword"
                             (change)="user.showPassword= !user.showPassword"> 
                         mostrar Contraseña
-                    </div> -->
+                    </div>
                     <p>Ya tienes cuenta <a href="/iniciar-sesion">Ingresa aca</a></p>
                     <button (click)="signUpWithCognito()">Registrarse </button>
                 </div>
@@ -42,4 +41,4 @@
     </div>
 
 </div>
-<!-- <app-mensaje-modelo *ngIf="showAlert" (modalClose)="showAlert = false" [message]="alertMessage"></app-mensaje-modelo> -->
+<app-mensaje-modelo *ngIf="showAlert" (modalClose)="showAlert = false" [message]="alertMessage"></app-mensaje-modelo>
