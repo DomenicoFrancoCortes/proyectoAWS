@@ -10,7 +10,7 @@ export class CognitoService {
 
   constructor() {
     Amplify.configure({
-      Auth: environment.cognito
+      Auth:environment.cognito
     })
   }
 
@@ -25,7 +25,7 @@ export class CognitoService {
       }
     })
   }
-  public confirmSingUp(user: User): Promise<any> {
+  public confirmSignUp(user: User): Promise<any> {
     return Auth.confirmSignUp(user.email, user.code);
   }
 

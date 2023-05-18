@@ -21,9 +21,9 @@ export class CrearUsuarioComponent implements OnInit {
     this.isConfirm = false;
   }
 
-  public singUpWithCognito() {
+  public signUpWithCognito() {
     if (this.user && this.user.email && this.user.password) {
-      this.cognitoService.confirmSingUp(this.user).then(() => {
+      this.cognitoService.signUp(this.user).then(() => {
         this.isConfirm = true;
       }).catch((error: any) => {
         this.displayAlert(error.message);
@@ -35,7 +35,7 @@ export class CrearUsuarioComponent implements OnInit {
   }
   public confirmSingUp(){
     if(this.user){
-      this.cognitoService.confirmSingUp(this.user).then(()=>{
+      this.cognitoService.confirmSignUp(this.user).then(()=>{
         this.router.navigate(['/iniciar-sesion'])
       }).catch((error:any)=>{
         this.displayAlert(error.message);
