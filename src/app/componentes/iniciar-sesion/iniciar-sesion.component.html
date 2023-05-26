@@ -1,15 +1,18 @@
-<div class="container" *ngIf="user">
-    <div class="row">
-        <div class="auth-box">
+
+
+<div class="contenedor"  *ngIf="user">
+    <div >
+        <div class="body">
             <!-- inicio de sesion -->
             <div *ngIf="!isForgotPassword">
                 <div class="header">
+                    <img class="logo" src="../../../assets/img/montañita-PhotoRoom.png-PhotoRoom.png" alt="logo-app">
                     <h2>Bienvenido</h2>
                     <h4>Inicia sesion</h4>
                 </div>
                 <div class="form">
-                    <input type="email" name="email" placeholder="Email" [(ngModel)]="user.email">
-                    <input [type]="user.showPassword ?  'text' : 'password'" name="password" placeholder="Contraseña"
+                    <input  type="email" name="email" placeholder="Email" [(ngModel)]="user.email">
+                    <input  [type]="user.showPassword ?  'text' : 'password'" name="password" placeholder="Contraseña"
                         [(ngModel)]="user.password">
                 </div>
                 <div style="font-size: 12px; margin-top: 6px;">
@@ -18,9 +21,9 @@
                     mostrar contraseña
                 </div>
 
-                <p class="forgot-password" (click)="forgotPassWordClicked()"> Olvido su contraseña</p>
-                <p>No tienes cuenta <a href="/crear-usuario">Crea tu usuario</a></p>
-                <button (click)="signInWithCognito()">Ingresar</button>
+                <p class="forgot-password" (click)="forgotPassWordClicked()"> <a>Olvido su contraseña </a></p>
+                <p class="forgot-password">No tienes cuenta <a href="/crear-usuario">Crea tu usuario</a></p>
+                <button class="btn" (click)="signInWithCognito()">Ingresar</button>
             </div>
 
             <!-- olvido su contraseña -->
@@ -28,19 +31,20 @@
                 <h2>Recuperar cuenta</h2>
                 <h4>EL codigo de verificacion se va a enviar al <strong>{{user.email}}</strong></h4>
                 <div class="form">
-                    <input type="text" placeholder="Ingrese el codigo de verificacion" name="verificationCode"
+                    <input style="width: 80%;" type="text" placeholder="Ingrese el codigo de verificacion" name="verificationCode"
                         [(ngModel)]="user.code">
-                    <input [type]="user.showPassword ?  'text' : 'password'" name="password"
+                    <input style="width: 80%;"  [type]="user.showPassword ?  'text' : 'password'" name="password"
                         placeholder="Ingrese una nueva Contraseña" [(ngModel)]="newPassword">
-                        <div style="font-size: 12px; margin-top: 6px;">
-                            <input type="checkbox" [checked]="user.showPassword"
+                        <div style="font-size: 12px; margin-top: 6px; display: inline-flex; align-items: center;">
+                            <input style="margin-right: 8px;" type="checkbox" [checked]="user.showPassword"
                                 (change)="user.showPassword = !user.showPassword">
                             mostrar contraseña
                         </div>
-                        <button (click)="newPasswordSubmit()">Ingresar</button>
+                        <button class="btn" style="display: flex; margin: auto; justify-content: center; align-items: center;" (click)="newPasswordSubmit()">Enviar</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <app-mensaje-modelo *ngIf="showAlert" (modalClose)="showAlert = false" [message]="alertMessage"></app-mensaje-modelo>
+

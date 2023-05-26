@@ -1,33 +1,36 @@
-<div class="container" *ngIf="user">
+<div class="contenedor" *ngIf="user">
 
-    <div class="row">
-        <div class="auth-box">
-            <!-- inicio de sesion -->
-            <div *ngIf="!isConfirm">
-                <div class="header">
-                    <h2> Registrarse</h2>
-                    <h4> Registre su cuenta usando la siguiene informacion</h4>
-                </div>
-                <div class="form">
-                    <input type="text" name="givenName" [(ngModel)]="user.givenName" placeholder="Nombre">
-                    <input type="text" name="familyName" [(ngModel)]="user.familyName" placeholder="Apellidos">
-                    <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email">
-                    <input type="password" name="password" [(ngModel)]="user.password" placeholder="contraseña">
-                    <!-- <input [type]="user.showPassword ? 'text' : 'password'" name="password" placeholder="Contraseña">
-                    <div style="font-size: 12px; margin: 8px 0;">
-                        <input type="checkbox" [checked]="user.showPassword"
-                            (change)="user.showPassword= !user.showPassword"> 
-                        mostrar Contraseña
-                    </div> -->
-                    <p>Ya tienes cuenta <a href="/iniciar-sesion">Ingresa aca</a></p>
-                    <button (click)="signUpWithCognito()">Registrarse </button>
-                </div>
+    <div class="body">
 
+        <!-- inicio de sesion -->
+        <div *ngIf="!isConfirm">
+            <div class="header">
+                <h2> Registrarse</h2>
+                <h4> Registre su cuenta usando la siguiene informacion</h4>
+            </div>
+            <div class="form">
+                <input type="text" name="givenName" [(ngModel)]="user.givenName" placeholder="Nombre">
+                <input type="text" name="familyName" [(ngModel)]="user.familyName" placeholder="Apellidos">
+                <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email">
+
+                <input [type]="user.showPassword ? 'text' : 'password'" name="password" placeholder="Contraseña">
+                <div style="font-size: 12px; margin-top: 6px; display: inline-flex; align-items: center;">
+                    <input style="margin-right: 8px;" type="checkbox" [checked]="user.showPassword"
+                        (change)="user.showPassword= !user.showPassword">
+                    mostrar Contraseña
+                </div>
+                <p class="cuenta">Ya tienes cuenta <a href="/iniciar-sesion">Ingresa aca</a></p>
+                <button class="btn" (click)="signUpWithCognito()">Registrarse </button>
             </div>
 
+        </div>
 
-            <!-- confirmar sesion -->
-            <div *ngIf="isConfirm">
+
+        <!-- confirmar sesion -->
+        <div class="contenedor" *ngIf="isConfirm">
+            <div class="body">
+
+
                 <div class="header">
                     <h2>Ingrese el codigo</h2>
                     <h4 style="color: green;">la vererificacion del codigo va a ser enviada a {{user.email}}</h4>
@@ -35,11 +38,11 @@
 
                 <div class="form">
                     <input type="text" name="verificationCode" placeholder="Ingrese el codigo" [(ngModel)]="user.code">
-                    <button (click)="confirmSingUp()"> Confirmar</button>
+                    <button class="btn" (click)="confirmSingUp()"> Confirmar</button>
                 </div>
             </div>
         </div>
     </div>
 
 </div>
-<!-- <app-mensaje-modelo *ngIf="showAlert" (modalClose)="showAlert = false" [message]="alertMessage"></app-mensaje-modelo> -->
+<app-mensaje-modelo *ngIf="showAlert" (modalClose)="showAlert = false" [message]="alertMessage"></app-mensaje-modelo>
