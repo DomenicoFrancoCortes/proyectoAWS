@@ -44,7 +44,7 @@ export class IniciarSesionComponent implements OnInit {
   this.displayAlert(error.message);
  })
     }else{
-      this.displayAlert('Ingrese un email y/o una contraseña valida')
+      this.displayAlert('Para recuperar su contraseña ingrese en el campo Email un mail valido y vuelva a tocar olvido su contraseña')
     }
   }
 

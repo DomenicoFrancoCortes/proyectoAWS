@@ -6,7 +6,7 @@
             <!-- inicio de sesion -->
             <div *ngIf="!isForgotPassword">
                 <div class="header">
-                    <img class="logo" src="../../../assets/img/montañita-PhotoRoom.png-PhotoRoom.png" alt="logo-app">
+                    <img class="logo" src="../../../assets/img/1.png" alt="logo-app">
                     <h2>Bienvenido</h2>
                     <h4>Inicia sesion</h4>
                 </div>
@@ -28,8 +28,9 @@
 
             <!-- olvido su contraseña -->
             <div *ngIf="isForgotPassword">
+                <img class="logo-forgot" src="../../../assets/img/confused.png" alt="logo-forgot">
                 <h2>Recuperar cuenta</h2>
-                <h4>EL codigo de verificacion se va a enviar al <strong>{{user.email}}</strong></h4>
+                <h4>EL codigo de verificacion se va a enviar al mail: <strong>{{user.email}}</strong></h4>
                 <div class="form">
                     <input style="width: 80%;" type="text" placeholder="Ingrese el codigo de verificacion" name="verificationCode"
                         [(ngModel)]="user.code">

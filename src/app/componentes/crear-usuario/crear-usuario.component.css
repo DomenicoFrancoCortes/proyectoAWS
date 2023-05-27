@@ -9,8 +9,10 @@
 
 }
 .logo{
-    width: 100%;
-    margin-bottom: -70px;
+    height: 140px;
+    margin-bottom: 10px;
+    
+    
 }
 
 .body{
@@ -47,7 +49,7 @@
     color: black;
 }
 .cuenta a:hover{
-     opacity: 0.6;
+    color: #32be8f;
 }
 
 .btn{

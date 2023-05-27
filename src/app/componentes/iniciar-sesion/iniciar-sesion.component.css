@@ -10,9 +10,13 @@
 }
 .logo{
     width: 100%;
-    margin-bottom: -70px;
+    margin-bottom: -60px;
 }
-
+.logo-forgot{
+    height: 140px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
 .body{
     margin: auto;
     width: 100%;
@@ -46,7 +50,8 @@
     color: black;
 }
 .forgot-password a:hover{
-     opacity: 0.6;
+     
+     color: #32be8f;
 }
 
 .btn{
@@ -54,6 +59,7 @@
 	width: 50%;
 	height: 40px;
 	border-radius: 25px;
+    margin-bottom: 15px;
 	outline: none;
 	border: none;
 	background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
