@@ -31,6 +31,7 @@ export class CrearUsuarioComponent implements OnInit {
     }
     else{
       this.displayAlert("informacion incorrecta");
+      console.log('usuario creado');
     }
   }
   public confirmSingUp(){
