@@ -11,7 +11,7 @@ import { CognitoService } from 'src/app/services/cognito.service';
 export class IniciarSesionComponent implements OnInit {
 
   user: User | undefined;
-
+  
   alertMessage: string = '';
   showAlert: boolean = false;
   olvidoPassword: boolean = false;

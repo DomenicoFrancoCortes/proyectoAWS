@@ -15,7 +15,7 @@
     
 }
 
-.body{
+.cuerpo{
     
     margin: auto;
     width: 100%;
@@ -27,7 +27,7 @@
     cursor: default;
     transition: all 400ms ease;
 }
-.body:hover{
+.cuerpo:hover{
     box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
     transform: translateY(-3%);
 }
