@@ -14,12 +14,12 @@
                         <input type="text" name="givenName" [(ngModel)]="user.givenName" placeholder="Nombre">
                         <input type="text" name="familyName" [(ngModel)]="user.familyName" placeholder="Apellidos">
                         <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email">
-
-                        <input [type]="user.showPassword ? 'text' : 'password'" name="password"
-                            placeholder="Contraseña">
+                        <input type="password" name="email" [(ngModel)]="user.password" placeholder="Contraseña">
+                
+                        <!-- <input [type]="user.showPassword ? 'text' : 'password'" name="password"
+                            placeholder="Contraseña"> -->
                         <div style="font-size: 12px; margin-top: 6px; display: inline-flex; align-items: center;">
-                            <input style="margin-right: 8px;" type="checkbox" [checked]="user.showPassword"
-                                (change)="user.showPassword= !user.showPassword">
+                          
                             mostrar Contraseña
                         </div>
                         <p class="cuenta">Ya tienes cuenta <a href="/iniciar-sesion">Ingresa aca</a></p>
