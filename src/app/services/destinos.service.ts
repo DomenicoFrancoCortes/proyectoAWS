@@ -12,6 +12,7 @@ export class DestinosService {
 
   obtenerDestinos(){
     console.log('haciendo GET a API destinos');
-    return this.http.get('https://nextripjson.s3.amazonaws.com/json/destinos.json');
+    //return this.http.get('https://nextripjson.s3.amazonaws.com/json/destinos.json');
+    return this.http.get('https://proyectonube89.s3.amazonaws.com/json/destinos.json');
   }
 }
