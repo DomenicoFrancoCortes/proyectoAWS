@@ -8,6 +8,8 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
 import { MensajeModeloComponent } from './componentes/mensaje-modelo/mensaje-modelo.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { FormsModule } from '@angular/forms';
+import { EstacionesComponent } from './componentes/estaciones/estaciones.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,12 +19,14 @@ import { FormsModule } from '@angular/forms';
     IniciarSesionComponent,
     MensajeModeloComponent,
     HomeComponent,
+    EstacionesComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
