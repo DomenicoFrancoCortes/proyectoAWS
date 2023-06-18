@@ -7,20 +7,68 @@ import { Destino } from '../models/destino'
 })
 export class DestinosService {
 
-  public destinoVerano: boolean;
-  public destinoPrimavera: boolean;
-  public destinoOtono: boolean;
-  public destinoInvierno: boolean;
-  public lugares: Destino[];
-  public lugar: Destino;
-  public lugarElegido: number;
-  public actividadElegida: number;
-  public eventoElegido: number;
+  public destinoVerano: boolean = false;
+  public destinoPrimavera: boolean = false;
+  public destinoOtono: boolean = false;
+  public destinoInvierno: boolean = false;
 
+  public lugaresVerano: Destino[] = [{
+    id: 0,
+    nombre: '',
+    descripcion: '',
+    imagen: '',
+    actividades: [],
+    eventos: []
+  }];
+  public lugaresInvierno: Destino[] = [{
+    id: 0,
+    nombre: '',
+    descripcion: '',
+    imagen: '',
+    actividades: [],
+    eventos: []
+  }];
+  public lugaresOtono: Destino[] = [{
+    id: 0,
+    nombre: '',
+    descripcion: '',
+    imagen: '',
+    actividades: [],
+    eventos: []
+  }];
+  public lugaresPrimavera: Destino[] = [{
+    id: 0,
+    nombre: '',
+    descripcion: '',
+    imagen: '',
+    actividades: [],
+    eventos: []
+  }];
+
+  public lugares: Destino[] = [{
+    id: 0,
+    nombre: '',
+    descripcion: '',
+    imagen: '',
+    actividades: [],
+    eventos: []
+  }];
+  public lugar: Destino = {
+    id: 0,
+    nombre: '',
+    descripcion: '',
+    imagen: '',
+    actividades: [],
+    eventos: []
+  };
+  public lugarElegido: number = 0;
+  public actividadElegida: number = 0;
+  public eventoElegido: number = 0;
 
   constructor(
     public http: HttpClient
   ) {
+    /*
     this.destinoVerano = false;
     this.destinoInvierno = false;
     this.destinoOtono = false;
@@ -44,6 +92,7 @@ export class DestinosService {
       actividades: [],
       eventos: []
     }
+    */
   }
 
   obtenerDestinos() {

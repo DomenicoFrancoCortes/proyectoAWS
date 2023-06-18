@@ -29,17 +29,17 @@ export class DestinoComponent implements OnInit {
   ngOnInit(): void {
     this.destino = this.destinosService.lugares.filter((lugar) => lugar.id === this.destinosService.lugarElegido);
     this.destinosService.lugar = this.destino[0];
-    console.log(this.destino);
+    console.log("Destino :" + this.destino.toString);
   }
 
   irActividad(actividadId: number) {
-    console.log(actividadId);
+    console.log("Actividad Id: " + actividadId);
     this.destinosService.actividadElegida = actividadId;
     this.router.navigate(['/actividad']);
   } 
 
   irEvento(eventoId: number) {
-    console.log(eventoId);
+    console.log("Evento Id: " + eventoId);
     this.destinosService.eventoElegido = eventoId;
     this.router.navigate(['/evento']);
   }   

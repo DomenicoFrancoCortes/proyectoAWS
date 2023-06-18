@@ -10,14 +10,32 @@ import { DestinosService } from '../../services/destinos.service';
 })
 export class HomeComponent implements OnInit {
 
+  data: any;
+
   constructor(
     private router: Router,
     private cognitoService: CognitoService,
-    public destinos: DestinosService
+    public destinosService: DestinosService
   ) { }
 
   ngOnInit(): void {
     this.getUserDetails();
+    this.ionViewDidLoad();
+  }
+
+  ionViewDidLoad() {
+    this.destinosService.obtenerDestinos()
+      .subscribe(
+        (data) => {
+          this.data = data;
+          this.destinosService.lugaresInvierno = this.data.invierno;
+          this.destinosService.lugaresOtono = this.data.otono;
+          this.destinosService.lugaresVerano = this.data.verano;
+          this.destinosService.lugaresPrimavera = this.data.primavera;
+          console.log(this.destinosService.lugaresInvierno);
+        },
+        (error) => { console.log(error); }
+      );
   }
 
   private getUserDetails() {
@@ -36,21 +54,25 @@ export class HomeComponent implements OnInit {
       this.router.navigate(['/iniciar-sesion']);
     })
   }
-  
+
   irDestinos(estacion: string) {
-    console.log(estacion);
+    console.log("Estacion: " + estacion);
     switch (estacion) {
       case 'V':
-        this.destinos.destinoVerano = true;
+        this.destinosService.destinoVerano = true;
+        this.destinosService.lugares = this.destinosService.lugaresVerano;
         break;
       case 'I':
-        this.destinos.destinoInvierno = true;
+        this.destinosService.destinoInvierno = true;
+        this.destinosService.lugares = this.destinosService.lugaresInvierno;
         break;
       case 'P':
-        this.destinos.destinoPrimavera = true;
+        this.destinosService.destinoPrimavera = true;
+        this.destinosService.lugares = this.destinosService.lugaresPrimavera;
         break;
       case 'O':
-        this.destinos.destinoOtono = true;
+        this.destinosService.destinoOtono = true;
+        this.destinosService.lugares = this.destinosService.lugaresOtono;
         break;
     }
     this.router.navigate(['/destinos']);

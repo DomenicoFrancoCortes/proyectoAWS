@@ -20,57 +20,27 @@ interface Idata {
 export class DestinosComponent implements OnInit {
 
   data: any;
-  lugares: Destino[];
+  lugares: Destino[] = [{
+    id: 0,
+    nombre: '',
+    descripcion: '',
+    imagen: '',
+    actividades: [],
+    eventos: []
+  }];
 
   constructor(
     public destinosService: DestinosService,
     private router: Router
   ) {
-    this.lugares = [{
-      id: 0,
-      nombre: '',
-      descripcion: '',
-      imagen: '',
-      actividades: [],
-      eventos: []
-    }];
   }
 
   ngOnInit(): void {
-    this.ionViewDidLoad();
-  }
-
-  ionViewDidLoad() {
-    this.destinosService.obtenerDestinos()
-      .subscribe(
-        (data) => {
-          this.data = data;
-
-          switch (true) {
-            case this.destinosService.destinoInvierno:
-              this.lugares = this.data.invierno;
-              break;
-            case this.destinosService.destinoPrimavera:
-              this.lugares = this.data.primavera;
-              break;
-            case this.destinosService.destinoVerano:
-              this.lugares = this.data.verano;
-              break;
-            case this.destinosService.destinoOtono:
-              this.lugares = this.data.otono;
-              break;
-          }
-
-          this.destinosService.lugares = this.lugares;
-
-          console.log(this.lugares);
-        },
-        (error) => { console.log(error); }
-      );
+    this.lugares = this.destinosService.lugares;   
   }
 
   irDestino(destinoId: number) {
-    console.log(destinoId);
+    console.log("Destino elegido: " + destinoId);
     this.destinosService.lugarElegido = destinoId;
     this.router.navigate(['/destino']);
   }  
