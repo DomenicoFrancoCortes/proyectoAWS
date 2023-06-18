@@ -1,8 +1,28 @@
+h1 {
+    text-align: center;
+}
+
+div.estaciones {
+    text-align: center;
+}
+
+div.polaroid {
+    width: 30%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 3%;
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+}
+
 .navigation{
     width: 100%;
     background-color: black;
 }
-img{
+img.logout{
 width: 25px;
 border-radius: 50px;
 float: left;
