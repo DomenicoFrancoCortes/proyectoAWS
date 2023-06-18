@@ -1,32 +1,25 @@
-<p>estaciones works!</p>
-<p>Verano</p>
-<p>{{ verano![0].nombre }}</p>
-<p>{{ verano![0].desc }}</p>
-<p>{{ verano![0].actividades[0].nombre }}</p>
-<p>{{ verano![0].actividades[0].desc }}</p>
-<p>{{ verano![0].eventos[0].nombre }}</p>
-<p>{{ verano![0].eventos[0].desc }}</p>
-<p>------------</p>
-<p>Invierno</p>
-<p>{{ invierno![0].nombre }}</p>
-<p>{{ invierno![0].desc }}</p>
-<p>{{ invierno![0].actividades[0].nombre }}</p>
-<p>{{ invierno![0].actividades[0].desc }}</p>
-<p>{{ invierno![0].eventos[0].nombre }}</p>
-<p>{{ invierno![0].eventos[0].desc }}</p>
-<p>------------</p>
-<p>Otoño</p>
-<p>{{ otono![0].nombre }}</p>
-<p>{{ otono![0].desc }}</p>
-<p>{{ otono![0].actividades[0].nombre }}</p>
-<p>{{ otono![0].actividades[0].desc }}</p>
-<p>{{ otono![0].eventos[0].nombre }}</p>
-<p>{{ otono![0].eventos[0].desc }}</p>
-<p>------------</p>
-<p>Primavera</p>
-<p>{{ primavera![0].nombre }}</p>
-<p>{{ primavera![0].desc }}</p>
-<p>{{ primavera![0].actividades[0].nombre }}</p>
-<p>{{ primavera![0].actividades[0].desc }}</p>
-<p>{{ primavera![0].eventos[0].nombre }}</p>
-<p>{{ primavera![0].eventos[0].desc }}</p>
+<h1>Estaciones</h1>
+
+<div class="estaciones">
+<div class="polaroid">
+    <img src="https://concepto.de/wp-content/uploads/2018/08/verano1-e1535637769656.jpg">
+    <div class="contenedor" (click)="irDestinos('V')" > Verano </div>
+</div>
+
+<div class="polaroid">
+    <img src="https://i0.wp.com/www.escuelaayurveda.com/wp-content/uploads/2023/02/salud-en-invierno.jpg?w=1174&ssl=1">
+    <div class="contenedor" (click)="irDestinos('I')" > Invierno </div>
+</div>
+</div>
+
+<div class="estaciones">
+<div class="polaroid">
+    <img src="https://concepto.de/wp-content/uploads/2022/10/otono-e1665266344782.jpg">
+    <div class="contenedor" (click)="irDestinos('O')" > Otoño </div>
+</div>
+
+<div class="polaroid">
+    <img src="https://www.explica.me/__export/1648075844306/sites/debate/img/2022/03/23/disexo_sin_txtulo_-_2022-03-23t164937_796_1.png_554688468.png">
+    <div class="contenedor" (click)="irDestinos('P')" > Primavera </div>
+</div>
+</div>

@@ -10,6 +10,10 @@ import { HomeComponent } from './componentes/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { EstacionesComponent } from './componentes/estaciones/estaciones.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DestinosComponent } from './componentes/destinos/destinos.component';
+import { DestinoComponent } from './componentes/destino/destino.component';
+import { ActividadComponent } from './componentes/actividad/actividad.component';
+import { EventoComponent } from './componentes/evento/evento.component';
 
 
 @NgModule({
@@ -20,6 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
     MensajeModeloComponent,
     HomeComponent,
     EstacionesComponent,
+    DestinosComponent,
+    DestinoComponent,
+    ActividadComponent,
+    EventoComponent,
    
   ],
   imports: [

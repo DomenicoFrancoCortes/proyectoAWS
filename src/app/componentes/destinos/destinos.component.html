@@ -1,0 +1,7 @@
+<h1>Destinos</h1>
+
+<div class="block">
+    <ul class="list">
+        <li *ngFor="let lugar of lugares" (click)="irDestino(lugar.id)">{{ lugar.nombre }}</li>
+    </ul>
+</div>
