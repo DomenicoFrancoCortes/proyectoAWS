@@ -8,6 +8,11 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
 import { MensajeModeloComponent } from './componentes/mensaje-modelo/mensaje-modelo.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DestinosComponent } from './componentes/destinos/destinos.component';
+import { DestinoComponent } from './componentes/destino/destino.component';
+import { ActividadComponent } from './componentes/actividad/actividad.component';
+import { EventoComponent } from './componentes/evento/evento.component';
 
 
 @NgModule({
@@ -17,12 +22,17 @@ import { FormsModule } from '@angular/forms';
     IniciarSesionComponent,
     MensajeModeloComponent,
     HomeComponent,
+    DestinosComponent,
+    DestinoComponent,
+    ActividadComponent,
+    EventoComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

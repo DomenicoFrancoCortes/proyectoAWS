@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+.block {
+    text-align: center;
+    background-color: lightgray;
+}
+
+.list {
+    text-align: left;
+    display: inline-block;
+}
