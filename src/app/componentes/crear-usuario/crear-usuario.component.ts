@@ -27,10 +27,10 @@ export class CrearUsuarioComponent implements OnInit {
     if (this.user && this.user.email && this.user.password) {
       this.cognitoService.signUp(this.user).then(() => {
         this.isConfirm = true;
-        console.log('usuario creado');
+        
       }).catch((error: any) => {
         this.displayAlert(error.message);
-        console.log('usuario no creado');
+        
       })
     }
     else{

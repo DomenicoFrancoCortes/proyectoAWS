@@ -74,4 +74,5 @@ export class DestinosService {
     console.log('haciendo GET a API destinos');
     return this.http.get('https://nextripjson.s3.amazonaws.com/json/destinos_v2.json');
   }
+  
 }

@@ -17,6 +17,7 @@ export class IniciarSesionComponent implements OnInit {
   olvidoPassword: boolean = false;
   isForgotPassword: boolean = false;
   newPassword: string = '';
+  
   constructor(private router: Router, private cognitoService: CognitoService) { }
 
   ngOnInit(): void {

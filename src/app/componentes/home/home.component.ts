@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CognitoService } from 'src/app/services/cognito.service';
 import { DestinosService } from '../../services/destinos.service';
+import { User } from 'src/app/models/user';
+import { FavoritosService } from 'src/app/services/favoritos.service';
+import { Favorito } from 'src/app/models/favorito';
 
 @Component({
   selector: 'app-home',
@@ -11,16 +14,33 @@ import { DestinosService } from '../../services/destinos.service';
 export class HomeComponent implements OnInit {
 
   data: any;
+  user: User = {
+    email: '',
+    password: '',
+    givenName: '',
+    familyName: '',
+    code: '',
+    showPassword: false
+  };
+  emailUsuario: string = '';
+
+   favoritos: Favorito[] = [{
+     email: '',
+     favoritos: []
+   }];
 
   constructor(
     private router: Router,
     private cognitoService: CognitoService,
-    public destinosService: DestinosService
+    public destinosService: DestinosService,
+    public favoritosService: FavoritosService
   ) { }
 
   ngOnInit(): void {
     this.getUserDetails();
+
     this.ionViewDidLoad();
+    
   }
 
   ionViewDidLoad() {
@@ -40,9 +60,10 @@ export class HomeComponent implements OnInit {
 
   private getUserDetails() {
     this.cognitoService.getUser().then((user: any) => {
+      this.user = user;
       if (user) {
-        //logueado
-        console.log(user);
+        this.emailUsuario = user.attributes.email;
+       
       } else {
         this.router.navigate(['/iniciar-sesion']);
       }
@@ -76,5 +97,17 @@ export class HomeComponent implements OnInit {
         break;
     }
     this.router.navigate(['/destinos']);
+  }
+  
+
+  enviarData() {
+    
+   this.favoritosService.userFavorito.email = this.emailUsuario;
+   
+   this.favoritosService.userFavorito.favoritos.push(30,40);
+    this.favoritosService.guardarFavoritos('https://9kqrh01hc4.execute-api.us-east-1.amazonaws.com/default/obtenerDato',
+    `{"email": "${this.favoritosService.userFavorito.email}", "favoritos": [${this.favoritosService.userFavorito.favoritos}]}`).subscribe(respuesta => {
+        console.log('comentario enviado');
+      })
   }
 }

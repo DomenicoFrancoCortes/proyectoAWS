@@ -11,7 +11,7 @@ export class CognitoService {
   constructor() {
     Amplify.configure({
       Auth:environment.cognito
-    })
+    });
   }
 
   public signUp(user: User): Promise<any> {
@@ -23,7 +23,7 @@ export class CognitoService {
         given_name: user.givenName,
         family_name: user.familyName
       }
-    })
+    });
   }
   public confirmSignUp(user: User): Promise<any> {
     return Auth.confirmSignUp(user.email, user.code);
