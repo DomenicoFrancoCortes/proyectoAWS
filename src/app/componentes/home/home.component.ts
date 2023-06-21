@@ -22,12 +22,8 @@ export class HomeComponent implements OnInit {
     code: '',
     showPassword: false
   };
-  emailUsuario: string = '';
 
-   favoritos: Favorito[] = [{
-     email: '',
-     favoritos: []
-   }];
+  emailUsuario: string = '';
 
   constructor(
     private router: Router,
@@ -40,7 +36,7 @@ export class HomeComponent implements OnInit {
     this.getUserDetails();
 
     this.ionViewDidLoad();
-    
+
   }
 
   ionViewDidLoad() {
@@ -63,7 +59,8 @@ export class HomeComponent implements OnInit {
       this.user = user;
       if (user) {
         this.emailUsuario = user.attributes.email;
-       
+        this.favoritosService.userFavorito.email = this.emailUsuario;
+        console.log(this.emailUsuario);
       } else {
         this.router.navigate(['/iniciar-sesion']);
       }
@@ -97,17 +94,5 @@ export class HomeComponent implements OnInit {
         break;
     }
     this.router.navigate(['/destinos']);
-  }
-  
-
-  enviarData() {
-    
-   this.favoritosService.userFavorito.email = this.emailUsuario;
-   
-   this.favoritosService.userFavorito.favoritos.push(30,40);
-    this.favoritosService.guardarFavoritos('https://9kqrh01hc4.execute-api.us-east-1.amazonaws.com/default/obtenerDato',
-    `{"email": "${this.favoritosService.userFavorito.email}", "favoritos": [${this.favoritosService.userFavorito.favoritos}]}`).subscribe(respuesta => {
-        console.log('comentario enviado');
-      })
   }
 }

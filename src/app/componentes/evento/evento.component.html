@@ -5,3 +5,7 @@
 <p><b>Imagen: </b> {{evento[0].imagen}}</p>
 
 <p><b>Fecha: </b> {{evento[0].fecha}}</p>
+
+<div class="bton">
+    <button (click)="guardarFavorito(evento[0].id)">Guardar Favorito</button>
+</div>

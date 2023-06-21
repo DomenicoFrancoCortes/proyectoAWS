@@ -8,6 +8,7 @@ import { DestinosComponent } from './componentes/destinos/destinos.component';
 import { DestinoComponent } from './componentes/destino/destino.component';
 import { ActividadComponent } from './componentes/actividad/actividad.component';
 import { EventoComponent } from './componentes/evento/evento.component';
+import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:'destino', component:DestinoComponent},
   {path:'actividad', component:ActividadComponent},
   {path:'evento', component:EventoComponent},
+  {path:'favoritos', component:FavoritosComponent},
   //{path:'**', component:HomeComponent}
   {path:'**', component:DestinosComponent}
 ];
