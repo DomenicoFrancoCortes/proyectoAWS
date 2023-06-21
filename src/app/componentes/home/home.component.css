@@ -6,12 +6,23 @@ div.estaciones {
     text-align: center;
 }
 
-div.polaroid {
+.polaroid {
     width: 30%;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 3%;
     display: inline-block;
+    transition: all 400ms ease;
+}
+
+.polaroid:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+.contenedor{
+    cursor: pointer;
+
+
 }
 
 img {
@@ -51,4 +62,33 @@ float: left;
 .user-content{
     padding: 100px;
     
+}
+.btn{
+	
+	width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    float: left;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+	background-size: 200%;
+	font-size: 1.2rem;
+	
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	
+  
+}
+
+.btn a{
+    text-decoration: none;
+    color: black;
+    transition: .5s;
+}
+.btn a:hover{
+	background-position: right;
+    color: #fff;
 }

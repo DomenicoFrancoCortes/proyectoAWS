@@ -11,3 +11,10 @@ p,h1 {
     text-align: left;
     display: inline-block;
 }
+.list li{
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+.list li:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+}
