@@ -11,7 +11,7 @@ import { EventoComponent } from './componentes/evento/evento.component';
 import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
 
 const routes: Routes = [
-  {path:'', component:IniciarSesionComponent},
+  {path:'', component:HomeComponent},
   {path:'crear-usuario', component:CrearUsuarioComponent },
   {path:'iniciar-sesion', component:IniciarSesionComponent},
   {path:'destinos', component:DestinosComponent},
@@ -20,7 +20,7 @@ const routes: Routes = [
   {path:'evento', component:EventoComponent},
   {path:'favoritos', component:FavoritosComponent},
   //{path:'**', component:HomeComponent}
-  {path:'**', component:IniciarSesionComponent}
+  {path:'**', component:DestinoComponent}
 ];
 
 @NgModule({
