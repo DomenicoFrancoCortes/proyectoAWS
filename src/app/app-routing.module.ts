@@ -11,7 +11,7 @@ import { EventoComponent } from './componentes/evento/evento.component';
 import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
 
 const routes: Routes = [
-  {path:'', component:HomeComponent},
+  {path:'', component:IniciarSesionComponent},
   {path:'crear-usuario', component:CrearUsuarioComponent },
   {path:'iniciar-sesion', component:IniciarSesionComponent},
   {path:'destinos', component:DestinosComponent},
