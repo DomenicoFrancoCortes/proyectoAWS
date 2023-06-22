@@ -4,8 +4,13 @@
 
 <p><b>Categoria: </b> {{actividad[0].categoria}}</p>
 
-<img *ngFor="let img of imagenes" src={{img}} alt="Actividad">
 
-<div class="boton">
-    <button class="btn" (click)="guardarFavorito(actividad[0].id)"><b>Guardar Favorito</b></button>
+<div class="imagenes">
+    <img *ngFor="let img of imagenes" src={{img}} alt="Actividad">
+</div>
+
+<div class="contenedor">
+    <div class="boton">
+        <button class="btn" (click)="guardarFavorito(actividad[0].id)"><b>Guardar Favorito</b></button>
+    </div>
 </div>

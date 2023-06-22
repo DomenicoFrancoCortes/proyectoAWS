@@ -6,6 +6,8 @@
 
 <img *ngFor="let img of imagenes" src={{img}} alt="Evento">
 
-<div class="boton">
-    <button class="btn" (click)="guardarFavorito(evento[0].id)"><b>Guardar Favorito</b></button>
+<div class="contenedor">
+    <div class="boton">
+        <button class="btn" (click)="guardarFavorito(evento[0].id)"><b>Guardar Favorito</b></button>
+    </div>
 </div>

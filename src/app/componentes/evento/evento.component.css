@@ -34,3 +34,13 @@ img{
     background-position: right;
     color: #fff;
 }
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: first baseline;
+    /* Centra verticalmente */
+    height: 300px;
+    /* Establece la altura deseada */
+}
