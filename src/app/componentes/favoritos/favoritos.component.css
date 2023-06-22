@@ -1,6 +1,5 @@
 .container {
     display: flex;
-    align-items: center;
     justify-content: center;
     margin-top: 15px;
 }
@@ -22,7 +21,7 @@ h1 {
 
 table {
     border-collapse: collapse;
-    width: 20%;
+    width: 40%;
 }
 
 th,td {

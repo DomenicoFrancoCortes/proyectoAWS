@@ -24,6 +24,10 @@ div.estaciones {
     width: 40%;
     margin: auto;    
 }
+.polaroid:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
 
 .polaroidVer {
     background-color: #fff;
@@ -35,11 +39,12 @@ div.estaciones {
     margin: auto; 
     margin-top: 90px;       
 }
-
-.polaroid:hover{
+.polaroidVer:hover{
     box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
     transform: translateY(-3%);
 }
+
+
 .contenedor{
     cursor: pointer;
 
