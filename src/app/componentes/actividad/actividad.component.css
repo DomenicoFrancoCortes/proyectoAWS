@@ -50,3 +50,15 @@ img {
     height: 300px;
     /* Establece la altura deseada */
 }
+.imagenes{
+    display: flex;
+    justify-content: center;
+    
+}
+.img:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+.img{
+    transition: all .4s ease;
+}
