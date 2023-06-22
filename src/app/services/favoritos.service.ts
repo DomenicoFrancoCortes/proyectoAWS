@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Favorito } from '../models/favorito';
+import { Actividad } from '../models/actividad';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,14 @@ import { Favorito } from '../models/favorito';
 export class FavoritosService {
 
   public userFavorito: Favorito = { email: '', favoritos: [] };
+
+  public listaActividades: Actividad[] = [{
+    id: 0,
+    nombre: '',
+    descripcion: '',
+    imagen: '',
+    categoria: ''
+  }]
 
   constructor(public http: HttpClient) {
     this.cargarStorage();

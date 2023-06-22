@@ -1,0 +1,15 @@
+.container{
+    align-items: center;
+}
+
+.table1{
+    float: left;
+}
+
+.table2{
+    float: none;
+}
+
+h1 {
+    text-align: center;
+}

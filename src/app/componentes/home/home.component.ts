@@ -49,9 +49,17 @@ export class HomeComponent implements OnInit {
           this.destinosService.lugaresVerano = this.data.verano;
           this.destinosService.lugaresPrimavera = this.data.primavera;
           console.log(this.destinosService.lugaresInvierno);
+          this.cargarVerano();
         },
         (error) => { console.log(error); }
       );
+  }
+
+  cargarVerano(){
+    this.favoritosService.listaActividades = this.destinosService.lugaresVerano[0].actividades;
+    console.log(this.destinosService.lugaresInvierno);
+    console.log(this.favoritosService.listaActividades.length);
+    console.log("carga actividades: " + JSON.stringify(this.favoritosService.listaActividades));
   }
 
   private getUserDetails() {
