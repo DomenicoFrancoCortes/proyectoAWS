@@ -18,3 +18,12 @@ p,h1 {
 .list li:hover{
     box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
 }
+
+img{
+    width: 280px;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 5px;
+    box-shadow: 1px 10px 25px rgb(0 0 0 / 0.2);
+    border-radius: 2px;    
+}

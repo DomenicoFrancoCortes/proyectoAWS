@@ -2,12 +2,10 @@
 
 <p><b>Descripcion: </b> {{actividad[0].descripcion}}</p>
 
-<p><b>Imagen: </b> {{actividad[0].imagen}}</p>
-
 <p><b>Categoria: </b> {{actividad[0].categoria}}</p>
 
-<div class="bton">
-    <button (click)="guardarFavorito(actividad[0].id)">Guardar Favorito</button>
-</div>
-
 <img *ngFor="let img of imagenes" src={{img}} alt="Actividad">
+
+<div class="boton">
+    <button class="btn" (click)="guardarFavorito(actividad[0].id)"><b>Guardar Favorito</b></button>
+</div>

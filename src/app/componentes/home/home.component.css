@@ -5,7 +5,7 @@ h1 {
 div.estaciones {
     text-align: center;
 }
-
+/*
 .polaroid {
     width: 30%;
     background-color: white;
@@ -13,6 +13,27 @@ div.estaciones {
     margin: 3%;
     display: inline-block;
     transition: all 400ms ease;
+}
+*/
+.polaroid {
+    background-color: #fff;
+    box-shadow: 0 3px 4px #0003, 0 6px 20px #00000030;
+    display: block;
+    transition: all .4s ease;
+    padding: 10px;
+    width: 40%;
+    margin: auto;    
+}
+
+.polaroidVer {
+    background-color: #fff;
+    box-shadow: 0 3px 4px #0003, 0 6px 20px #00000030;
+    display: block;
+    transition: all .4s ease;
+    padding: 10px;
+    width: 40%;
+    margin: auto; 
+    margin-top: 90px;       
 }
 
 .polaroid:hover{
