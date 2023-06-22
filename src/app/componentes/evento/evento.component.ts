@@ -11,6 +11,7 @@ import { FavoritosService } from 'src/app/services/favoritos.service';
 export class EventoComponent implements OnInit {
 
   evento: Evento[];
+  imagenes: string[] = [];
 
   constructor(
     public destinosService: DestinosService,
@@ -27,6 +28,7 @@ export class EventoComponent implements OnInit {
 
   ngOnInit(): void {
     this.evento = this.destinosService.lugar.eventos.filter((eve) => eve.id === this.destinosService.eventoElegido);
+    this.cargarImagenes();
   }
 
   guardarFavorito(id: number) {
@@ -53,4 +55,35 @@ export class EventoComponent implements OnInit {
         console.log('comentario enviado');
       })
   }
+
+  cargarImagenes() {
+    switch (true) {
+      case this.evento[0].id >= 100 && this.evento[0].id < 200:
+        for (let i = 1; i < 4; i++) {
+          this.imagenes[i - 1] = "https://nextripjson.s3.amazonaws.com/img/verano/" + this.evento[0].id + "_0" + i + ".jpg";
+          console.log(this.imagenes[i]);
+        }
+        break;
+      case this.evento[0].id >= 200 && this.evento[0].id < 300:
+        for (let i = 1; i < 4; i++) {
+          this.imagenes[i - 1] = "https://nextripjson.s3.amazonaws.com/img/otonio/" + this.evento[0].id + "_0" + i + ".jpg";
+          console.log(this.imagenes[i]);
+        }
+        break;
+      case this.evento[0].id >= 300 && this.evento[0].id < 400:
+        for (let i = 1; i < 4; i++) {
+          this.imagenes[i - 1] = "https://nextripjson.s3.amazonaws.com/img/invierno/" + this.evento[0].id + "_" + i + ".jpg";
+          console.log(this.imagenes[i]);
+        }
+        break;
+      case this.evento[0].id >= 400 && this.evento[0].id < 500:
+        for (let i = 1; i < 4; i++) {
+          this.imagenes[i - 1] = "https://nextripjson.s3.amazonaws.com/img/primavera/" + this.evento[0].id + "_0" + i + ".jpg";
+          console.log(this.imagenes[i]);
+        }
+        break;
+      default:
+        break;
+    }
+  }    
 }

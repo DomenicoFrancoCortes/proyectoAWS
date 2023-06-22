@@ -17,3 +17,5 @@
         <li *ngFor="let eve of destino[0].eventos" (click)="irEvento(eve.id)">{{ eve.nombre }}</li>
     </ul>
 </div>
+
+<img *ngFor="let img of imagenes" src={{img}} alt="Destino">

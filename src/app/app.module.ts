@@ -14,7 +14,7 @@ import { DestinoComponent } from './componentes/destino/destino.component';
 import { ActividadComponent } from './componentes/actividad/actividad.component';
 import { EventoComponent } from './componentes/evento/evento.component';
 import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
-
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -28,13 +28,14 @@ import { FavoritosComponent } from './componentes/favoritos/favoritos.component'
     ActividadComponent,
     EventoComponent,
     FavoritosComponent,
-   
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    //NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

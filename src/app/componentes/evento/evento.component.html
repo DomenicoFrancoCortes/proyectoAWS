@@ -9,3 +9,5 @@
 <div class="bton">
     <button (click)="guardarFavorito(evento[0].id)">Guardar Favorito</button>
 </div>
+
+<img *ngFor="let img of imagenes" src={{img}} alt="Evento">
