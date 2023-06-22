@@ -20,7 +20,7 @@ const routes: Routes = [
   {path:'evento', component:EventoComponent},
   {path:'favoritos', component:FavoritosComponent},
   //{path:'**', component:HomeComponent}
-  {path:'**', component:DestinosComponent}
+  {path:'**', component:IniciarSesionComponent}
 ];
 
 @NgModule({
