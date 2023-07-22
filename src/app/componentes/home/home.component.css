@@ -156,6 +156,10 @@ footer p a:hover{
     }
     footer{
         font-size: 10px;
+        
+    }
+    footer p a{
+        color: #4996dd;
     }
   }
   @media (max-width: 415px) {
@@ -170,6 +174,9 @@ footer p a:hover{
     }
     footer{
         font-size: 10px;
+    }
+    footer p a{
+        color: #4996dd;
     }
   }
   @media (max-width: 280px) {
@@ -202,5 +209,8 @@ footer p a:hover{
     }
     footer{
         font-size: 7.8px;
+    }
+    footer p a{
+        color: #4996dd;
     }
   }
