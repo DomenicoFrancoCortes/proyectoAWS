@@ -51,7 +51,7 @@
 }
 .forgot-password a:hover{
      
-     color: #32be8f;
+     color: #4996dd;
 }
 
 .btn{
@@ -62,7 +62,7 @@
     margin-bottom: 15px;
 	outline: none;
 	border: none;
-	background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+	background-image: linear-gradient(to right,  #54adff,#4d9ce6,#4996dd);
 	background-size: 200%;
 	font-size: 1.2rem;
 	color: black;

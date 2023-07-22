@@ -2,16 +2,26 @@ h1 {
     text-align: center;
 }
 
+
 .block {
     text-align: center;
-    background-color: lightgray;
     
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center
+}
+img{
+    width: 50%;
 }
 
 .list {
     text-align: left;
     display: inline-block;
-    
+    position: absolute;
+    font-size: 30px;
+    padding-top: 50px;
 }
 .list li{
     cursor: pointer;
@@ -20,3 +30,14 @@ h1 {
 .list li:hover{
     box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
 }
+
+@media (max-width: 400px) {
+    .list{
+        font-size: 13px;
+    }
+  }
+  @media (max-width: 415px) {
+    .list{
+        font-size: 13px;
+    }
+  }

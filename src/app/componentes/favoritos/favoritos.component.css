@@ -31,9 +31,10 @@ th,td {
 }
 
 tr:nth-child(even) {
-    background-color: #8bbb7c;
+    background-color: #54adff;
+    
 }
 
 thead{
-    background-color: #7e995a;
+    background-color: #4996dd;
 }
