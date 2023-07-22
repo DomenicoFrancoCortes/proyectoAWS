@@ -143,3 +143,64 @@ footer p a{
 footer p a:hover{
     color: #080808;
 }
+
+@media (max-width: 400px) {
+    .polaroid{
+        width: 60%;
+    }
+    .polaroidVer{
+        width: 60%;
+    }
+    .button{
+        padding: 0;
+    }
+    footer{
+        font-size: 10px;
+    }
+  }
+  @media (max-width: 415px) {
+    .polaroid{
+        width: 60%;
+    }
+    .polaroidVer{
+        width: 60%;
+    }
+    .button{
+        padding: 0;
+    }
+    footer{
+        font-size: 10px;
+    }
+  }
+  @media (max-width: 280px) {
+    .btn{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 30px;
+    border-radius: 20px;
+    float: left;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #54adff,#4d9ce6,#4996dd);
+    background-size: 200%;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    cursor: pointer;
+    }
+    .polaroid{
+        width: 60%;
+    }
+    .polaroidVer{
+        width: 60%;
+    }
+    .button{
+        padding: 0;
+    }
+    footer{
+        font-size: 7.8px;
+    }
+  }
