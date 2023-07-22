@@ -9,9 +9,11 @@ import { DestinoComponent } from './componentes/destino/destino.component';
 import { ActividadComponent } from './componentes/actividad/actividad.component';
 import { EventoComponent } from './componentes/evento/evento.component';
 import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
+import { NextripComponent } from './componentes/nextrip/nextrip.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
+  {path:'home', component:HomeComponent},
   {path:'crear-usuario', component:CrearUsuarioComponent },
   {path:'iniciar-sesion', component:IniciarSesionComponent},
   {path:'destinos', component:DestinosComponent},
@@ -19,7 +21,7 @@ const routes: Routes = [
   {path:'actividad', component:ActividadComponent},
   {path:'evento', component:EventoComponent},
   {path:'favoritos', component:FavoritosComponent},
-  //{path:'**', component:HomeComponent}
+  {path:'nextrip', component:NextripComponent},
   {path:'**', component:DestinoComponent}
 ];
 

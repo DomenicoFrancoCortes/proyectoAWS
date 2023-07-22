@@ -14,6 +14,7 @@ import { DestinoComponent } from './componentes/destino/destino.component';
 import { ActividadComponent } from './componentes/actividad/actividad.component';
 import { EventoComponent } from './componentes/evento/evento.component';
 import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
+import { NextripComponent } from './componentes/nextrip/nextrip.component';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { FavoritosComponent } from './componentes/favoritos/favoritos.component'
     ActividadComponent,
     EventoComponent,
     FavoritosComponent,
+    NextripComponent,
     
   ],
   imports: [

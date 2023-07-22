@@ -126,3 +126,20 @@ float: left;
 	background-position: right;
     color: #fff;
 }
+footer{
+    display: flex;
+    /* align-content: center; */
+    justify-content: center;
+
+}
+footer p {
+    margin-right: 15px;
+}
+footer p a{
+    text-decoration: none;
+    color: #4996dd;
+    transition: .5s;
+}
+footer p a:hover{
+    color: #080808;
+}
