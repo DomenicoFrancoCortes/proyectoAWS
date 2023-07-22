@@ -16,13 +16,14 @@
                         <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email">
                         <input type="password" name="email" [(ngModel)]="user.password" placeholder="Contraseña">
                 
-                         <!-- <input [type]="user.showPassword ? 'text' : 'password'" name="password"
-                            placeholder="Contraseña"> 
-                         <div style="font-size: 12px; margin-top: 6px; display: inline-flex; align-items: center;">
+                        <!-- <input [type]="user.showPassword ? 'text' : 'password'" name="password"
+                            placeholder="Contraseña">  -->
+                          <!-- <div style="font-size: 12px; margin-top: 6px; display: inline-flex; align-items: center;">
                             <input type="checkbox" [checked]="user.showPassword"
                             (change)="user.showPassword = !user.showPassword">
                             mostrar Contraseña
                         </div> -->
+                        <p>Minimo 8 caracteres contener una mayucula, un numero y un caracter especial</p>
                         <p class="cuenta">Ya tienes cuenta <a href="/iniciar-sesion">Ingresa aca</a></p>
                         <button class="btn" (click)="signUpWithCognito()">Registrarse </button>
                     </div>
@@ -53,5 +54,5 @@
         </div>
     </div>
 
-
+    
 </div>
