@@ -52,7 +52,12 @@ img {
 
 .navigation{
     width: 100%;
-    background-color: black;
+
+}
+.nombreUsuario{
+    margin-left: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 img.logout{
 width: 25px;
@@ -108,7 +113,7 @@ float: left;
 	background-image: linear-gradient(to right,  #54adff,#4d9ce6,#4996dd);
 	background-size: 200%;
 	font-size: 1.2rem;
-	
+	margin-left: 15px;
 	font-family: 'Poppins', sans-serif;
 	text-transform: uppercase;
 	margin: 1rem 0;

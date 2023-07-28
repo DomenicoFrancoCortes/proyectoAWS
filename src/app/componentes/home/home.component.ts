@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
   };
 
   emailUsuario: string = '';
+  nombreUsuario: string = '';
 
   constructor(
     private router: Router,
@@ -65,8 +66,10 @@ export class HomeComponent implements OnInit {
   private getUserDetails() {
     this.cognitoService.getUser().then((user: any) => {
       this.user = user;
+      console.log(user);
       if (user) {
         this.emailUsuario = user.attributes.email;
+        this.nombreUsuario = user.attributes.given_name + ' ' + user.attributes.family_name;
         this.favoritosService.userFavorito.email = this.emailUsuario;
         console.log(this.emailUsuario);
       } else {
